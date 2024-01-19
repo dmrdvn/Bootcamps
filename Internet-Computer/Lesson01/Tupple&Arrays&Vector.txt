@@ -1,0 +1,117 @@
+A) Tupple
+
+Birbirinden farklı değişkenlerin tek bir değişken olarak gösterilmesi için.
+Bir kez oluşturunca değiştirilemezler.
+
+Kullanımı:
+
+//bazı farklı değişkenleri topladık
+let mixed: (i32, f64, char) = (500, 3.2, 'a');
+
+//değişkenleri tiplerine göre xyz ye atadık
+let (x:i32, y:f64, z:char) = mixed;
+
+
+B) Array Types:
+
+let days: [&str; 3] = [
+    "Monday",
+    "Tuesday",
+    "Wendesday",
+]
+
+println!("First day: {}", days[0]);
+
+
+C) Vector Types: (Değişken array türü)
+
+let mut v = Vec::from([1,2,3,4]);
+
+v.push(6); //vectorün sonunda 6 ekler.
+let x = v.get(0) //0.elemente erişim.
+
+println!("Vectin ilk elementi {}", x);
+
+Örnek 2 (String birleştirme):
+
+let mut s = String::from("Hello");
+s.push_str(", World");
+println!("Sonuc {}", s);
+
+D) (Hashmap yani key-value):
+
+let mut hashmapOrnek = std::collections::HashMap::new();
+hashmapOrnek.insert("name","Hasan");
+hashmapOrnek.insert("surname", "Demir")
+
+let adi = hashmapOrnek.get("name");
+println!("Adınız {:?}", adi);
+
+E) (HashSet yani sadece eleman tutulan veri yapısı)
+
+let mut z = std::collections::HashSet::from([1,2,3]);
+z.insert(4);
+
+for n in &z {
+    println!("HashSetteki elemanlar", n);
+}
+
+F) (Binary Tree Map):
+
+let mut btm = std::collections::BTreeMap::new();
+btm.insert(1,"One");
+btm.insert(2,"Two");
+
+let lengthOfBtm = btm.len();
+println!("BTM eleman sayisi {}", lengthOfBtm);
+
+G) (Binary Tree Set):
+
+let mut bts = std::collections::BTreeSet::new();
+bts.insert("Apple");
+bts.insert("Orange");
+
+for item in &bts {
+    println!("BTS elemanlari {}", item);
+}
+
+H) Enumlar:
+
+// Move = fonksiyon, içindeki ise parametre
+enum Message {
+    QUit,
+    Move(Point),
+    Write(String),
+    ChangeColor(Color),
+}
+
+let m = Messsage::Move(Point {x:10.0, y:20.0 }); //Message enumundan instance oluşturduk
+
+match m {
+    Message::Move(p) => println!("The message is the move to ({},{})", p.x, p.y), //Move'a gelen parametreler p adıyla gösterilir.
+    _ => (),
+}
+
+G) Struct'taki Trait'ler:
+
+impl Point {
+    fn distance(&self, other: &Point) -> f64 {
+        ((self.x - other.x).powl(2) + (self.y - other.y).powl(2)).sqrt()
+    }
+}
+
+Örnek 2: 
+
+//Point için bir trait tanımlamak istersek;
+
+//Trait'i oluşturuyoruz
+trait Shape {
+    fn area(&self) -> f64;
+}
+
+//Trait'i Point için uyguluyoruz
+impl Shape for Point {
+    fn area(&self) -> f64 {
+        0.0
+    }
+}

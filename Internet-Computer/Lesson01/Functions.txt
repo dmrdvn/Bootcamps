@@ -1,0 +1,33 @@
+1) Fonksiyonlar
+
+fn main() -> i32 {
+
+}
+
+2) Parametreli Fonksiyonlar
+
+fn karesi(sayi:i32) -> i32 {
+    return sayi*sayi;
+    //eğer tek satır ise "return" ve noktalı virgül kullanmadan sayi*sayi olarak ifade edilebilir
+}
+
+fn main() -> i32 {
+    karesi(2);
+}
+
+3) Function Çağrısı:
+
+//Fonksiyonları oluşturduk
+fn greet(name: &str) {
+    println!("Hello {}", name);
+}
+
+fn add(x:i32, y:32) -> i32 {
+    x+y
+}
+
+//Fonksiyonları çağırdık
+greet("Alice");
+
+let sum = add(5,6);
+println!("Sum is {}", sum);

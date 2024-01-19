@@ -1,0 +1,31 @@
+A) Ownership:
+
+let s1 = String::from("Merhaba");
+let s2 = s1; //s1'in sahipliği s2 ye geçti. Artık s1 diye bir değişken yok.
+println!("{}", s1); //s1 olmadığı için hata verir.
+
+B) Orjinal Veriyi Koruyarak Klonlama:
+
+let s1 = String::from("Hello");
+let s2 = s1.clone();
+println!("{}", s1); //Çalışıe çünkü s1 değişkeni hala mevcut.
+
+C) Fonksiyona String Geçme ve Sahiplik Transferi:
+
+let s = String::from("Merhaba");
+take_ownership(s);
+println!("{}", s); //bu kod hata verir çünkü sahiplik transfer edildi
+
+D) Referans ve Borç Alma (Değeri Değiştirmeden)
+
+let s1 = String::from("Hello World");
+let len = calculate_length(&s1); //and işareti ekleyerek değeri borç alıyoruz, değerin orjinali etkilenmiyor.
+
+println!("The length of '{}' is {}.", s1, len);
+
+E) Referans ve Borç Alma (Değeri Değiştirerek - mut)
+
+let mut s = String::from("Hello World");
+change(&mut s);
+
+println!("String after change {}", s);

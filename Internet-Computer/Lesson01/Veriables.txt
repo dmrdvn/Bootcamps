@@ -1,0 +1,65 @@
+A) Tam Sayı Değişkenleri
+
+let a = 1;
+let b = 1i32;
+let c:i32 = 1;
+
+Değişken Boyutları
+
+8 bit - i8 - u8
+16 bit - i16 - u16
+32 bit - i32 - u32
+64 bit - i64 - u64
+128 bit - i128 - u128
+İşlemci bit genişliği => isize - usize
+
+B) Floating (Virgüllü) Sayılar
+
+let pi:f32 = 3.14159;
+let pi:f64 = 3.14159; 
+let pi = 3.14159; (tip kullanmazsak varsayılan f64 olur)
+
+Değişken Boyutları
+
+32bit - f32
+64bit - f64 
+
+C) Boolean Değişkenler
+
+let a:bool = true;
+let b = false;
+
+Değişken Boyutu
+8bit - bool
+
+D) Char Değişkenleri
+
+let karakter:char = 'z';
+let garip_z = 'Z';
+let emoji = '🤑';
+
+Değişken Boyutu
+32bit - char
+
+E) Metin Değişkenleri
+
+let s:&str = "Sabit bir metin"; //&str: Immutable yani değiştirilemez demektir. str'ler stack'te saklanır
+let s:String = String::from("Dinamik bir metin"); //Heap'te saklanır ve değiştirilebilir
+
+
+F) Değişken Atamaları
+
+Yanlış:
+let i = 1;
+i = 5;
+
+Doğru:
+let mut i = 1;  //mutable yani değiştirilebilir olduğunu ifade ediyoruz
+i = 5;
+
+G) Shadowing
+
+let i = 1;
+let i = 5; //eski değişken yok oldu, i değeri artık 5 oldu.
+
+

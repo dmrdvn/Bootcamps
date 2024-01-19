@@ -1,0 +1,26 @@
+- Proje oluşturmak => cargo new, cargo init  
+
+    cargo init: varolan dizinde ve dizin ismiyle.
+    cargo new uygulamaAdi
+    argo new --lib kutuphanem
+
+- Derlemek => cargo build
+
+- Bağımlılık (crate) Eklemek => cargo add crateAdi
+
+    Bağımlılıklar cargo.toml dosyasında yer alır.
+
+- Çalıştırmak => cargo run
+
+- Testi çalıştırma => cargo test
+
+- Bağımlı paket lisanslarını kontrol etmek => cargo deny
+
+- Kod formatlama/linting => cargo fmt, cargo flippy
+
+
+Hiyerarşi
+
+- Proje bilgileri => cargo.toml
+- Kaynak kodlar => /src
+- Derlenmiş dosyaların formatı => .exe, .so, .dylib..

@@ -1,0 +1,66 @@
+Örnek 1:
+
+struct User {
+    active: bool,
+    username: String,
+    email: String,
+    sign_counter:u64,
+}
+
+fn main() -> {
+    let ornekUser = User {
+        active:true,
+        username:String::from("Hasan"),
+        email:String::from("info@example.com"),
+        sign_counter:0,
+    };
+}
+
+Örnek 2:
+
+//Struct oluşturduk
+struct User {
+    name: String
+}
+
+//Struct'tan implement ettik
+impl User {    
+    fn greet(&self) -> String {
+        format!("Merhaba ben", self.name)
+    }
+}
+
+//Ana metod
+fn main() -> u32 {
+    let ornekUser2 = User {
+        name:String::from("Hasan")
+    };
+}
+
+//Yazdır
+println!("{}",user.greet());
+
+
+Örnek 3:
+
+struct Point{
+    x: f64,
+    y: f64,
+}
+
+struct Color{ f64, f64, f64, }
+
+
+let p = Point {x: 3.0, y: 4.5} //Değer vererek point instance oluşturduk
+let c = Color {0.5, 0.8, 0.3}
+
+println!("The point is at ({},{})", p.x, p.y);
+println!("The color is ({},{},{}), c.0, x.1, x.2); //0. 1. ve 2. elemanı diyerek de struct'taki elemana ulaşabiliriz.
+
+
+Örnek 4 - Özel Tipler : 
+
+struct Meter; //Metre özel tipinden instance oluşturduk
+let m = Meter; //m ye atadık
+
+let length: Meter = m; // uzunluk diye değişken oluşturduk ve Metre özel tipindeki m yi uzunluk a atadık.
