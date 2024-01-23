@@ -1,7 +1,7 @@
 # WordCounter App with Rust
 
 
-To run the "Todo App" application that I coded in Rust language;
+To run the "WordCounter App" application that I coded in Rust language;
 
 ### Install Cargo on Linux
 
