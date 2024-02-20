@@ -1,0 +1,14 @@
+IC SDK ile yüklenen araçlar;
+
+dfx => Kodları ICP'de dağıtmak ve test etmek için kullanılan komut satır aracıdır.
+replica => ICP'yi local ortamda çalıştırmak için kullanıyoruz.
+network binary => ICP uygulamasının derlenmiş sürümüdür.
+uninstall.sh => Blockchain kaldırma işlevi için kullanılır.
+versions => Yazılım paketlerin sürümlerini kontrol ediyoruz.
+
+Proje Oluşturma:
+dfx new --type=rust projeAdi
+
+
+Sorgu Fonksiyonu belirteci;
+#[ic_cdk::query]
