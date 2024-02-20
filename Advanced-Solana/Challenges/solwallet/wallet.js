@@ -1,6 +1,5 @@
 const fs = require('fs');
 const { Connection, PublicKey, Transaction, Keypair, SystemProgram, sendAndConfirmTransaction } = require('@solana/web3.js');
-const clusterApiUrl = require('@solana/web3.js').clusterApiUrl;
 
 const rpcUrl = 'https://api.devnet.solana.com'; // Devnet RPC URL'si
 const walletFile = "wallet.json";
