@@ -1,0 +1,14 @@
+Rust Linux Kurulumu:
+
+Paketlerin güncel olup olmamasını kontrol ediyoruz:
+sudo apt install build-essential
+
+Kurulum yapıyoruz:
+curl --proto '=htpps' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+Enviroment Dosyasını/Pathi Aktifleştirme:
+source $HOME/.cargo/env
+
+Not: "echo $PATH" komutu ile veya ls komutu ile .bashrc dosyasını bul ve vim .bashrc komutu ile dosyayı aç.
+En alt satıra bu komutu ekle => export PATH = "$HOME/.cargo/bin:$PATH"
+wq yazıp enter ile dosyayı kaydediyoruz.
