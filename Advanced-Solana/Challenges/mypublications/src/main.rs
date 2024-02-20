@@ -2,18 +2,21 @@ enum Publication {
     Books(Book),
     Magazines(Magazine),
 }
+
 struct Book {
     id: u32,
     title: String,
     author: String,
     page_count: u32,
 }
+
 struct Magazine {
     id: u32,
     title: String,
     issue: u32,
     topic: String,
 }
+
 fn print_publications(publications: Vec<Publication>) {
     for p in publications {
         match p {
